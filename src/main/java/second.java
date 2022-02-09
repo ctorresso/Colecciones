@@ -1,22 +1,19 @@
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Random;
 
 public class second {
     public static void main(String[] args) {
 
-        LinkedList<String> first=new LinkedList<String>();
+        LinkedList<Character> first=new LinkedList<Character>();
 
 
-        first.add("Sonora");
-        first.add("Sinaloa");
-        first.add("Nayarit");
-        first.add("Chihuahua");
-        first.add("Quintana Roo");
-        first.add("Jalisco");
-        first.add("Michoacan");
-        first.add("Veracruz");
-        first.add("Campeche");
-        first.add("Baja California");
+        Random r= new Random();
+        for (int i = 0; i < 10; i++) {
+            char character =(char)(r.nextInt(26)+'a');
+            first.add(character);
+
+        }
 
         System.out.println(first);
         Collections.reverse(first);
